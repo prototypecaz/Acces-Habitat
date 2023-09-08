@@ -1,0 +1,13 @@
+#Tous les robots sont autorisés
+User-Agent: *
+#Crawl-Delay:10 (permet au robot de rester un certain temps)
+#J'autorise le robot de crawl sur ce lien
+Allow: /*.html
+Allow: /pages/*.html
+Allow: /assets/js/*.js
+Allow: /assets/css/style.css
+Allow: /assets/img/*.webp
+Allow:/assets/webfonts
+# Interdiction de crawl ces repertoire ou ces fichiers
+Disallow: /*.php
+Sitemap:https://www.acces-habitat-montauban.fr/sitemap.xml

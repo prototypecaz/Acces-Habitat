@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="language" content="fr-FR">
+    <meta name="author" content="Guillaume.C">
+    <title>Contactez nous | Trouvez nous | Devis rapide | Acces Habitat | Montauban Caussade Cahors Toulouse</title>
+    <meta name="description" content="Acces Habitat : Contactez-nous : Pour plus d'informations sur Acces Habitat ou pour un devis de plomberie et de chauffage sans engagement, veuillez nous appeler, nous envoyer un e-mail ou remplir le formulaire de contact et un membre de notre équipe vous contactera.">
+    <meta name="keywords" content="Plombier,Plomberie,Chauffe-eau, Services de plomberie, Robinet, Salle de bain, Toilettes, Réparation, Installations, Rénovation, Construction">
+    <link rel="icon" type="image/png" href="../assets/img/FaviconLogo.webp"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"/>
+   
+    <link href="../assets/framework/bootstrapContact.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/framework/allContact.css"/>
+
+    <script src='../assets/api/mapbox-gl.js'></script>
+    <link href='../assets/api/mapbox.css' rel='stylesheet' type="text/css"/>
+
+</head>
+<body>
+    <header>
+
+        <div class="row upHeaderCoordonnees" style="--bs-gutter-x: 0;">
+            <div class="text-white d-flex flex-wrap justify-content-center align-items-center  py-2  px-sm-0 col-12 col-xl-11 ">
+                <div class="mb-1 me-2 coordonne ms-0 ms-lg-5 ps-lg-5">
+                    <i class="fas fa-map-marker-alt" title="map-marker"></i>
+                </div>
+                <span class="text-center coordonne">1 Chemin De Sesquieres 82800 MONTRICOUX</span>
+                <span class="px-2 py-1 text-dark ms-2 fw-bold colorBeige coordonne numeroTelephone">07 78 66 45 81</span>
+            </div>
+            <div class="col-12 col-xl-1 d-flex justify-content-center align-items-center pe-2 mb-2 mb-xl-0">
+                <a href="https://www.google.fr/maps/place/Acces+Habitat/@44.0769887,1.6212621,15z/data=!4m5!3m4!1s0x0:0xc4feb66e2d5478a7!8m2!3d44.0769887!4d1.6212621" target="_blank"><img src="../assets/img/google.webp" class="w-10" alt="google"></a>
+                <a href="https://www.facebook.com/accesHabitatPlomberie" target="_blank"><img src="../assets/img/facebook.webp" class="w-10 mx-2" alt="facebook"></a>
+                <a href="https://www.instagram.com/acces_habitat_plomberie/" target="_blank"><img src="../assets/img/instagram.webp" class="w-10" alt="instagram"></a>
+            </div>
+        </div>
+
+        <div class="container px-3 px-sm-0">
+            <div class="nav navbar navbar-expand-md navbar-light bg-white justify-content-between align-items-center py-3 px-0">
+                <a href="../"><img src="../assets/img/logo.webp" id="logoAccesHabitat" alt="Logo acces habitat"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="flex-md-row mx-auto mx-md-0 justify-content-center navbar-nav navbar-collapse collapse burger fw-bold" id="navbar-content">
+                    <a href="../" class="nav-link nav-item font colorDark bordure">Accueil</a>
+                    <a href="../pages/plombier-accesHabitat-nosServices.html" class="nav-link nav-item font colorDark mx-2 bordure">Nos services</a>
+                    <a href="../pages/plombier-accesHabitat-nosRealisations.html" class="nav-link nav-item font colorDark bordure">Nos réalisations</a>
+                    <a href="../pages/plombier-accesHabitat-contact.html" class="nav-link nav-item font colorDark ms-2 lienContact mt-1 bordure">Contact</a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="backgroundD3 pb-5">
+
+  <!-- Présentation Contact -->
+        <div>
+            <div class="position-relative divContact">
+                <img src="../assets/img/MeubleSalleDeBain1.webp" srcset="../assets/img/MeubleSalleDeBain.webp 480w, ../assets/img/MeubleSalleDeBain1.webp 1080w" sizes="(max-width: 765px) 140vw,(max-width: 1000px) 120vw, 56.5vw" class="w-100 img-fluid imageDescriptionAccueil" alt="Image de fond salle de bain">
+                <div class="position-absolute text-white descriptionAccueil">
+                    <h1 class="fw-bold w-100 titreService titreContact">Entrez en relation avec Acces Habitat</h1>
+                    <p class="mt-5 p-3 p-md-0 pContact fw-bold">Si vous souhaitez plus d'informations sur les services fournit chez <em>ACCES HABITAT</em>, ou si vous voulez un devis, veuillez remplir le formulaire de contact ci-dessous et un membre de notre équipe vous contactera dès que possible.</p>
+                </div>
+                <div class="d-none" id="confirmationMail">
+                    <p class="bg-dark d-inline p-4 fw-bold text-white rounded"><i class="far fa-envelope me-2"></i> Votre message à bien était envoyer</p>
+                </div>
+            </div>
+        </div>
+        
+        <!--Formulaire de Contact-->
+        <div  class="backgroundD3 w-100 position-relative hForm">
+            <div id="formulaireC" class="bg-white p-5 rounded position-absolute formulaireContact" >
+                <div>
+                    <h2 class="text-center fw-bold titreProjet">Contactez-nous</h2>
+                    <div class="pt-1 w-25 bg-dark mx-auto mb-5 mt-4 ligneTitre"></div>
+                </div>
+                <div>
+                    <form class="row justify-content-center" onsubmit="return false" id="formulaireAccueil">
+                        <div class="col-md-5 col-12">
+                            <input type="text" class="w-100 rounded nom py-1 " placeholder="Nom" required>
+                        </div>
+                        <div class="col-md-5 offset-md-1 col-12 mt-4 mt-sm-0">
+                            <input type="text" class="w-100 rounded prenom py-1 " placeholder="Prénom" required>
+                        </div>
+                        <div class="col-md-5 mt-4 col-12">
+                            <input type="email" minlength="3" maxlength="64" class="w-100 rounded email py-1" placeholder="Email" required>
+                        </div>
+                        <div class="col-md-5 offset-md-1 mt-4 col-12">
+                            <input type="tel" minlength="10" maxlength="14" class="w-100 rounded telephone py-1" placeholder="Téléphone" required>
+                        </div>
+                        <div class="col-md-11 my-4 px-md-5 col-12">
+                            <input type="text" class="w-100 rounded sujet py-1" placeholder="Sujet" required>
+                        </div>
+                        <div class="col-md-11 px-md-5 col-12">
+                            <textarea  class="w-100 rounded message" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="col-md-11 my-4 col-12">
+                            <p class="w-100 infoEngage"><em>ACCES HABITAT</em> SASU s'engage à ce que la collecte et le traitement de vos données, effectués à partir de notre site accesHabitat.fr, soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés. Pour connaître et exercer vos droits, notamment de retrait de votre consentement à l'utilisation des données collectées par ce formulaire, veuillez consulter notre politique de confidentialité</p>
+                        </div>
+                        <div class="col-md-11 text-right col-12">
+                            <button id="envoieFormulaire" type="submit" class="float-end contactTel px-5 rounded fw-bold backgroundContact text-white py-2">Envoyer</button>
+                        </div>
+                    </form>
+
+                    <div id="loading" class="d-none">
+                        <img class="w-25"src="../assets/img/loading.gif">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Double div-->
+        <div class="pt-1 backgroundContact bgCdiv d-none d-md-block"></div>
+        <div class="pt-1 backgroundContact mb-5 d-none d-md-block"></div>
+
+        <!-- Map -->
+        <div>
+            <div class="">
+                <div id='map' class="w-100 mapH"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="backgroundD3">
+        <div class="mt-5 container py-5">
+            <div class="row flex-column align-items-center align-items-sm-start  flex-sm-row justify-content-center">
+                <div class="d-flex flex-column w-25 align-items-center col-12 col-sm-3">
+                    <address class="d-flex flex-column mb-5">
+                        <span><em>Acces Habitat</em></span>
+                        <span>Siren: 883242844</span>
+                        <span>1 Chemin de Sesquieres</span>
+                        <span>82300 MONTRICOUX</span>
+                    </address>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="../assets/img/logo.webp" class="logoFooter" alt="Logo acces habitat">
+                        <div class="d-flex justify-content-center mt-3">
+                            <img src="../assets/img/QualificationRgeQualiPac.webp" alt="Qualification rge qualipac" class="w-25">
+                            <img src="../assets/img/QualificationRgeChauffage.webp" alt="Qualification rge chauffage plus" class="w-25 mx-3">
+                            <img src="../assets/img/QualificationRgeVentilation.webp" alt="Qualification rge ventilation plus" class="w-25">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex align-items-center flex-column col-sm-3">
+                    <h4 class="mb-0 fw-bold fontColorBeige mt-5 mt-sm-0">Pages</h4>
+                    <div class="text-center mt-3 mt-sm-5">
+                        <ul class="p-0">
+                            <li><a class="text-dark aFooter" href="../index.html">Accueil</a></li>
+                            <li><a class="text-dark aFooter" href="../pages/plombier-accesHabitat-nosServices.html">Nos Services</a></li>
+                            <li><a class="text-dark aFooter" href="../pages/plombier-accesHabitat-nosRealisations.html">Nos Réalisations</a></li>
+                            <li><a class="text-dark aFooter" href="../pages/plombier-accesHabitat-contact.html">Contact</a></li>
+                            <li><a class="text-dark aFooter" href="../pages/plombier-accesHabitat-mentionLégale.html">Mention Légale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-3 text-center mt-4 mt-sm-0">
+                    <h4 class="fw-bold fontColorBeige">Contact</h4>
+                    <div class="mt-3 mt-sm-5">
+                        <p>Email: <strong>acces.habitat@yahoo.com</strong></p>
+                        <p>Téléphone: <strong>07 78 66 45 81</strong></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-3 text-center mt-4 mt-sm-0">
+                    <h4 class="fw-bold fontColorBeige">Réseaux Sociaux</h4>
+                    <div class="mt-3 mt-sm-5">
+                        <a href="https://www.google.fr/maps/place/Acces+Habitat/@44.0769887,1.6212621,15z/data=!4m5!3m4!1s0x0:0xc4feb66e2d5478a7!8m2!3d44.0769887!4d1.6212621" target="_blank"><img src="../assets/img/google.webp" class="w-10" alt="google"></a>
+                        <a href="https://www.facebook.com/accesHabitatPlomberie" target="_blank"><img src="../assets/img/facebook.webp" class="w-10 mx-2" alt="facebook"></a>
+                        <a href="https://www.instagram.com/acces_habitat_plomberie/" target="_blank"><img src="../assets/img/instagram.webp" class="w-10" alt="instagram"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="../assets/framework/bootstrap5.min.js"></script>
+    <script src="../assets/framework/gsap.min.js"></script>
+    <script src="../assets/framework/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/function.js"></script>
+    <script src="../assets/js/animationContact.js"></script>
+    <script src="../assets/js/envoieMail.js"></script>
+    <script src="../assets/js/location.js"></script>
+    <script src="../assets/js/map.js"></script>
+
+</body>
+</html>
